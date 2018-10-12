@@ -279,13 +279,15 @@ $(document).keydown(function(event){
 });
 
 document.addEventListener('touchstart', function(e){
+	e.preventDefault();
 	startx=e.touches[0].pageX;
 	starty=e.touches[0].pageY;
 });
 
 document.addEventListener('touchend', function(e){
-	endx=event.changedTouches[0].pageX;
-	endy=event.changedTouches[0].pageY;
+	e.preventDefault();
+	endx=e.changedTouches[0].pageX;
+	endy=e.changedTouches[0].pageY;
 
 	//判断滑动方向
 	var deltax=endx-startx;
