@@ -279,13 +279,15 @@ $(document).keydown(function(event){
 });
 
 document.addEventListener('touchstart', function(e){
-	e.preventDefault();
 	startx=e.touches[0].pageX;
 	starty=e.touches[0].pageY;
 });
 
-document.addEventListener('touchend', function(e){
+document.addEventListener('touchmove', function(e){
 	e.preventDefault();
+});
+
+document.addEventListener('touchend', function(e){
 	endx=e.changedTouches[0].pageX;
 	endy=e.changedTouches[0].pageY;
 
