@@ -285,6 +285,7 @@ document.addEventListener('touchstart', function(e){
 
 document.addEventListener('touchmove', function(e){
 	e.preventDefault();
+	e.stopPropagation();
 });
 
 document.addEventListener('touchend', function(e){
